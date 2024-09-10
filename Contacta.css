@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+.contenedor{
+    padding: 60px 0;
+    width:90% ;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo{
+    color: rgb(237, 159, 25);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom : 60px;
+
+}
+
+header{
+    width:100% ;
+    height: 600px; ;
+    background: url(Compañeros.jpg);
+    background-size:cover ;
+    background-attachment: fixed;
+    position: relative;
+ 
+    
+
+}
+
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+
+}
+
+nav> a{
+    color:rgb(249, 119, 6);
+    font-weight: 300;
+    text-decoration: none;
+   margin-right: 10px;
+
+}
+
+
+nav> a:hover{
+    text-decoration: underline;
+   }
+
+.Ola{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+
+header .texto-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center ;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.texto-header h1{
+    font-size: 50px;
+    color: rgb(253, 250, 250);
+}
+
+
+.texto-header h2{
+      font-size: 30px;
+      font-weight: 300;
+      color: rgb(242, 242, 238);
+      text-align: center;
+}
+
+
+
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+    color: white;
+    border-bottom: 3px solid yellow;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+    margin: 0.5em 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.banner p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.banner .contact {
+    margin-top: 1em;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background: yellow;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.banner .contact:hover {
+    background: #ffd700;
+}
+
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2em;
+    }
+
+    .banner p, .banner .contact {
+        font-size: 1em;
+    }
+}
+
+
+.card{
+    float: left;
+    margin-left:  1%;
+    padding-left: 1px;
+      padding-bottom: 10px;
+    margin-bottom: 2%;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+      transition: all 400ms ease; 
+    cursor: default; 
+    
+        
+}
+    
+.card-img-top{
+    padding: 20px;
+    margin:center 10%;
+    background-color: 
+    
+}
+.card-text{
+    background-color: white;
+    margin-top: 15px;
+    padding: 15px;
+    
+}
+.card:hover{
+    background-color: rgb(194, 183, 58);
+    transform: translateY(-1%);
+    
+}
+.card-img-top{
+    width: 100%;
+    height: 210px;
+}
+.card-title{
+    text-align: center;
+}
+.btn btn-dark{
+    transition: all 400ms ease;
+    border-radius: 4px
+    
+}
+.btn btn-dark:hover{
+    background-color: white;
+    color: white;
+}
+
+
+
+
+.footer{
+    width: 95%;
+    height: 100%;
+}
+
+
+
+
+/*enviar mensaje*/
+.container {
+    max-width: 800px;
+    background-color: #f4eeee;
+    border-radius: 8px;
+    border: 1px solid #0a0a0a; /* Color y grosor del borde */
+    box-shadow: 5px 5px 9px rgba(9, 0, 0, 0.3); /* Desplazamiento x, desplazamiento y, difuminado, color */
+    padding: 20px;
+    margin: 20px auto;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.form-group {
+    margin-bottom: 20px;
+   width: 700px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #100f0f;
+}
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+textarea {
+    height: 150px;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+
+}
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = $_POST['nombre'];
+    $correo = $_POST['correo'];
+    $mensaje = $_POST['mensaje'];
+
+    // Aquí puedes procesar los datos, como enviarlos por correo electrónico o guardarlos en una base de datos.
+    echo "Nombre: " . htmlspecialchars($nombre) . "<br>";
+    echo "Correo: " . htmlspecialchars($correo) . "<br>";
+    echo "Mensaje: " . htmlspecialchars($mensaje) . "<br>";
+
+} else {
+    echo "Método no permitido.";
+}
+?>
