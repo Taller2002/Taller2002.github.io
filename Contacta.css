@@ -195,66 +195,67 @@ header .texto-header{
 
 
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-/*enviar mensaje*/
-.container {
-    max-width: 800px;
-    background-color: #f4eeee;
-    border-radius: 8px;
-    border: 1px solid #0a0a0a; /* Color y grosor del borde */
-    box-shadow: 5px 5px 9px rgba(9, 0, 0, 0.3); /* Desplazamiento x, desplazamiento y, difuminado, color */
-    padding: 20px;
-    margin: 20px auto;
 }
-h1 {
+.form{
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0, 0,0, 0);
+    border-radius: 20px;
     text-align: center;
-    color: #333;
+    width: 340px;
 }
-.form-group {
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+.h2{
+    color: black;
+    font-size: 35px;
+
+}
+.label{
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.input,textarea{
+    padding: 17px 25px;
+    border-radius: 25px;
     margin-bottom: 20px;
-   width: 700px;
+    background-color: white;
+    border: 2px solid white;
+    color: darkgray;
+    outline: none;
 }
-label {
-    display: block;
-    margin-bottom: 8px;
-    color: #100f0f;
-}
-input[type="text"], textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-textarea {
-    height: 150px;
-}
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-input[type="submit"]:hover {
-    background-color: #45a049;
+input::placeholder, textarea::placeholder{
+    color: aliceblue;
 
 }
+.btn{
+    background-color: chartreuse;
 
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = $_POST['nombre'];
-    $correo = $_POST['correo'];
-    $mensaje = $_POST['mensaje'];
 
-    // Aquí puedes procesar los datos, como enviarlos por correo electrónico o guardarlos en una base de datos.
-    echo "Nombre: " . htmlspecialchars($nombre) . "<br>";
-    echo "Correo: " . htmlspecialchars($correo) . "<br>";
-    echo "Mensaje: " . htmlspecialchars($mensaje) . "<br>";
-
-} else {
-    echo "Método no permitido.";
 }
-?>
+@media(max-width:991px){
+    body{
+        padding: 30px;
+    }
+    form{
+        padding: 50px 30px;
+        width: 100%;
+        
+
+        }
+        .input{
+            padding: 15px;
+        }
+    }
