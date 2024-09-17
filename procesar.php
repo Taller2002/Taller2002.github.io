@@ -1,17 +1,28 @@
+
+?>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recibir los datos del formulario
     $nombre = $_POST['nombre'];
-    $correo = $_POST['correo'];
+    $email = $_POST['email'];
     $mensaje = $_POST['mensaje'];
 
-    // Aquí puedes procesar los datos, como enviarlos por correo electrónico o guardarlos en una base de datos.
-    echo "Nombre: " . htmlspecialchars($nombre) . "<br>";
-    echo "Correo: " . htmlspecialchars($correo) . "<br>";
-    echo "Mensaje: " . htmlspecialchars($mensaje) . "<br>";
+    // Definir el correo destinatario
+    $destinatario = "paolagonzaleslobo87@gmail.com"; // Cambia esto por tu correo
 
-    // Ejemplo de redirección a una página de agradecimiento.
-    // header('Location: gracias.html');
-} else {
-    echo "Método no permitido.";
+    // Asunto del correo
+    $asunto = "Nuevo Mensaje de Contacto";
+
+    // Cuerpo del mensaje
+    $cuerpo = "Nombre: $nombre\nCorreo: $email\nMensaje:\n$mensaje";
+
+    // Enviar el correo
+    if (mail($destinatario, $asunto, $cuerpo)) {
+        echo "¡Mensaje enviado exitosamente!";
+    } else {
+        echo "Hubo un problema al enviar el mensaje.";
+    }
 }
 ?>
+
+
