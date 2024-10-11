@@ -39,13 +39,14 @@ header{
 
 
 nav{
-    text-align: right;
+    text-align: left;
     padding: 30px 50px 0 0;
+    margin-left: 3%;
 
 }
 
 nav> a{
-    color:rgb(249, 119, 6);
+    color:rgb(249, 212, 6);
     font-weight: 300;
     text-decoration: none;
    margin-right: 10px;
@@ -76,16 +77,19 @@ header .texto-header{
 
 .texto-header h1{
     font-size: 50px;
-    color: rgb(250, 249, 249);
+    color: rgb(252, 249, 249);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
 .texto-header h2{
       font-size: 30px;
       font-weight: 300;
-      color: rgb(244, 244, 239);
+      color: rgb(255, 255, 255);
       text-align: center;
 }
+
+
 
 /*About us*/
 
@@ -194,22 +198,11 @@ header .texto-header{
 
 
 
-  .mar{
-    width: 800px;
-    height: 90;
-    background-color: turquoise;
-  }
+  /* Footer */
+footer {
+    background-color: #a8a1a1;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* Estilos básicos de restablecimiento */
+}

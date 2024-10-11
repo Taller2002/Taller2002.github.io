@@ -1,4 +1,4 @@
-*{
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -38,13 +38,14 @@ header{
 
 
 nav{
-    text-align: right;
+    text-align: left;
     padding: 30px 50px 0 0;
+    margin-left: 3%;
 
 }
 
 nav> a{
-    color:rgb(249, 119, 6);
+    color:rgb(249, 204, 6);
     font-weight: 300;
     text-decoration: none;
    margin-right: 10px;
@@ -202,5 +203,5 @@ input, textarea {
 }
 
 button:hover {
-    background-color: #08bef5;
+    background-color: #08bef5;
 }
