@@ -156,7 +156,7 @@ header .texto-header{
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #FFFFFF;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -164,7 +164,7 @@ body {
 
 .container {
     max-width: 800px;
-    background-color: #f4eeee;
+    background-color: #FFFFFF;
     border-radius: 8px;
     border: 1px solid #0a0a0a; /* Color y grosor del borde */
     box-shadow: 5px 5px 9px rgba(9, 0, 0, 0.3); /* Desplazamiento x, desplazamiento y, difuminado, color */
@@ -194,7 +194,7 @@ input, textarea {
 .button {
     width: 100%;
     padding: 10px;
-    background-color: #5cb85c;
+    background-color: #faf607;
     color: white;
     border: none;
     border-radius: 5px;
@@ -205,3 +205,11 @@ input, textarea {
 button:hover {
     background-color: #08bef5;
 }
+
+footer {
+    background-color: #999494;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}   
