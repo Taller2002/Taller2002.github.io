@@ -117,7 +117,7 @@ p {
 
 
 .btn:hover {
-    background-color: #019ba9;
+    background-color: #f9fafa;
 }
 
 /* Sección Historia */
@@ -244,5 +244,5 @@ footer {
   .mar{
     width: 800px;
     height: 90;
-    background-color: turquoise;
+    background-color: rgb(250, 255, 254);
   }
